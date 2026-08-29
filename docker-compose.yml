@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+ vaultwarden:
+ image: vaultwarden/server:latest
+ container_name: vaultwarden
+ restart: always
+ ports:
+ - "${VAULT_PORT:-8000}:80"
+ - "${WEBSOCKET_PORT:-3012}:3012"
+ environment:
+ - WEBSOCKET_ENABLED=true
+ - SIGNUPS_ALLOWED=${SIGNUPS_ALLOWED:-true}
+ - INVITATIONS_ALLOWED=true
+ - ADMIN_TOKEN=${ADMIN_TOKEN:-admin_token_secret_hash}
+ - DOMAIN=${DOMAIN:-http://localhost:8000}
+ volumes:
+ - vaultwarden_data:/data
+
+volumes:
+ vaultwarden_data:
