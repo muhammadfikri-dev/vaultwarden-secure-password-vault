@@ -54,3 +54,9 @@ docker compose up -d
 
 ## 📄 Lisensi
 Didistribusikan di bawah lisensi resmi open-source. Dikembangkan dan dikonfigurasi untuk standar industri oleh **Muhammad Fikri**.
+
+---
+
+<p align="center">
+  Dibuat dengan ❤️ oleh <b>Muhammad Fikri Dev</b>
+</p>
